@@ -265,7 +265,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(217, 83, 79, 0.2) 0%, rgba(0, 0, 0, 0.8) 70%);
+  background: linear-gradient(90deg, 
+    rgba(220, 53, 69, 0.6) 0%, 
+    rgba(156, 39, 176, 0.6) 40%, 
+    rgba(63, 81, 181, 0.6) 100%);
 }
 
 /* Emergency Light Animation */
