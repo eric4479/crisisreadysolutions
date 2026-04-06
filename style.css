@@ -1008,3 +1008,82 @@ img:not(.loaded) {
     flex-direction: column;
   }
 }
+
+/* Why AHA Page Styles */
+.intro-section {
+  border-left: 5px solid var(--primary-color) !important;
+}
+
+.benefit-card {
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.benefit-icon {
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1);
+}
+
+.benefit-card h4 {
+  color: var(--dark-color);
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.benefit-card:hover h4 {
+  color: var(--primary-color);
+}
+
+.fact-box {
+  transition: all 0.3s ease;
+  background: white !important;
+}
+
+.fact-box:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fact-box h5 {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.cta-box {
+  transition: all 0.3s ease;
+}
+
+.cta-box:hover {
+  box-shadow: 0 10px 40px rgba(217, 83, 79, 0.2);
+  transform: translateY(-2px);
+}
+
+#aha-resources {
+  background-color: #f8f9fa;
+}
+
+#aha-resources .card {
+  transition: all 0.3s ease;
+  background: white;
+}
+
+#aha-resources .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+#aha-resources .card i {
+  transition: transform 0.3s ease;
+}
+
+#aha-resources .card:hover i {
+  transform: scale(1.1);
+}
