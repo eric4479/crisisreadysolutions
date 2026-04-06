@@ -288,10 +288,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, 
-    rgba(220, 53, 69, 0.6) 0%, 
-    rgba(156, 39, 176, 0.6) 40%, 
-    rgba(63, 81, 181, 0.6) 100%);
+  background: linear-gradient(to right, 
+    rgba(70, 20, 20, 0.7) 0%,
+    rgba(45, 25, 60, 0.7) 50%,
+    rgba(15, 35, 85, 0.7) 100%);
 }
 
 /* Emergency Light Animation */
@@ -778,4 +778,70 @@ img:not(.loaded) {
 
 .img-hover-zoom:hover img {
   transform: scale(1.05);
+}
+
+/* CPR Steps Section */
+#cpr-steps {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f4f8 100%);
+  color: #333;
+  position: relative;
+}
+
+#cpr-steps .section-heading {
+  color: var(--dark-color);
+}
+
+#cpr-steps .text-muted {
+  color: #666 !important;
+}
+
+.infographic-container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(217, 83, 79, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.infographic-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color), #3f51b5);
+  z-index: 1;
+}
+
+.infographic-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(217, 83, 79, 0.15);
+}
+
+.infographic-image {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.infographic-container:hover .infographic-image {
+  transform: scale(1.02);
+}
+
+/* Responsive Infographic */
+@media (max-width: 768px) {
+  .infographic-container {
+    padding: 20px;
+  }
+  
+  .infographic-image {
+    max-width: 100%;
+    height: auto;
+  }
 }
