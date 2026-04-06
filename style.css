@@ -271,7 +271,7 @@ body {
 
 /* Hero Section */
 #hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1631815587646-b85a0b298dd5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('assets/hero-training.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
