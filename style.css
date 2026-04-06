@@ -107,6 +107,29 @@ body {
   animation: fadeInUp 1.2s ease-out 0.6s both;
 }
 
+.hero-badges {
+  animation: fadeInUp 1.2s ease-out 0.5s both;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.badge-item:hover {
+  transform: scale(1.05);
+}
+
+.badge-item i {
+  font-size: 1.2rem;
+}
+
 @keyframes slideInDown {
   from {
     opacity: 0;
