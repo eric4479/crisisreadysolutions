@@ -919,3 +919,92 @@ img:not(.loaded) {
     height: auto;
   }
 }
+
+/* Glossary Page Styles */
+.glossary-index {
+  background: linear-gradient(135deg, rgba(217, 83, 79, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+  border-left: 5px solid var(--primary-color);
+}
+
+.glossary-index h3 {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.glossary-letter-links li {
+  margin-bottom: 12px;
+}
+
+.glossary-letter-links a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding-left: 15px;
+  position: relative;
+}
+
+.glossary-letter-links a::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: var(--primary-color);
+}
+
+.glossary-letter-links a:hover {
+  color: var(--primary-color);
+  padding-left: 20px;
+}
+
+.glossary-letter-links a:hover::before {
+  opacity: 1;
+}
+
+.glossary-term {
+  scroll-margin-top: 100px;
+}
+
+.glossary-icon {
+  flex-shrink: 0;
+}
+
+.glossary-term h3 {
+  color: var(--dark-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glossary-term:hover h3 {
+  color: var(--primary-color);
+}
+
+.glossary-term p {
+  line-height: 1.8;
+}
+
+.glossary-term .small {
+  color: #666;
+}
+
+#glossary-resources {
+  background-color: #f8f9fa;
+}
+
+/* Responsive Glossary */
+@media (max-width: 768px) {
+  .glossary-term {
+    margin-bottom: 2rem;
+  }
+  
+  .glossary-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+  
+  .d-flex {
+    flex-direction: column;
+  }
+}
