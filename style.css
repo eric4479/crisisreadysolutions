@@ -780,6 +780,80 @@ img:not(.loaded) {
   transform: scale(1.05);
 }
 
+/* AED Training Section */
+#aed-training {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#aed-training::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff9800, var(--primary-color), transparent);
+  z-index: 1;
+}
+
+.aed-image-container {
+  position: relative;
+  z-index: 2;
+}
+
+.aed-image {
+  border-radius: 15px;
+  box-shadow: 0 15px 50px rgba(217, 83, 79, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 152, 0, 0.2);
+}
+
+.aed-image:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(217, 83, 79, 0.3);
+}
+
+.aed-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.aed-content h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aed-content .text-white {
+  color: white !important;
+  font-weight: 500;
+}
+
+.aed-content .text-white-50 {
+  color: rgba(255, 255, 255, 0.75) !important;
+  line-height: 1.8;
+}
+
+.aed-content .btn-light {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.aed-content .btn-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+  background-color: #f8f9fa;
+}
+
 /* CPR Steps Section */
 #cpr-steps {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f4f8 100%);
