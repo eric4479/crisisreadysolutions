@@ -179,7 +179,7 @@
 ## Components
 
 ### Navigation Bar
-- Logo (left) + nav links (right): Home | Services | About | Contact
+- Logo (left): 150px width container with inline Firefighter SVG (e.g., `<div class="logo" style="color: #C0392B;">`)
 - Sticky on scroll with slight box-shadow
 - Mobile: hamburger menu with slide-down drawer
 - CTA button in nav: `Schedule Training` (red background, white text)
@@ -202,7 +202,7 @@
   - ❤️ AHA Standards
 
 ### Footer
-- 3-column: Logo/tagline | Quick Links | Contact Info
+- 3-column: Logo (150px Inline SVG) / tagline | Quick Links | Contact Info
 - Dark Navy background, white text
 - Copyright: `© 2023 Crisis Ready Solutions LLC. All rights reserved.`
 - Privacy Policy | Terms of Service links

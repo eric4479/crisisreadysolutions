@@ -1,15 +1,15 @@
 
 :root {
-  --primary-color: #d9534f;
-  --primary-dark: #c9302c;
-  --secondary-color: #f9f9f9;
-  --dark-color: #333;
-  --light-color: #f4f4f4;
+  --primary-color: #C0392B;
+  --primary-dark: #A93226;
+  --secondary-color: #1A2A4A;
+  --dark-color: #2C2C2C;
+  --light-color: #F5F5F5;
   --success-color: #5cb85c;
-  --danger-color: #d9534f;
-  --accent-color: #ff9800;
-  --gradient-start: #d9534f;
-  --gradient-end: #c9302c;
+  --danger-color: #E74C3C;
+  --accent-color: #FFFFFF;
+  --gradient-start: #C0392B;
+  --gradient-end: #E74C3C;
 }
 
 html {
@@ -238,8 +238,17 @@ body {
 }
 
 .logo {
-  height: 50px;
+  width: 150px;
+  max-height: 80px;
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.logo svg, .footer-logo svg {
+  width: 100%;
+  height: auto;
+  fill: currentColor;
 }
 
 .navbar-brand:hover .logo {
@@ -592,6 +601,7 @@ footer::before {
 
 .footer-logo {
   height: 60px;
+  width: 150px;
   margin-bottom: 15px;
   filter: drop-shadow(0 2px 5px rgba(255, 255, 255, 0.1));
 }
