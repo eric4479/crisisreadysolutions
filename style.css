@@ -1097,3 +1097,9 @@ img:not(.loaded) {
 #aha-resources .card:hover i {
   transform: scale(1.1);
 }
+@media (max-width: 576px) {
+  .logo {
+    height: 44px;
+    max-height: 56px;
+  }
+}
