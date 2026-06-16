@@ -9,6 +9,7 @@
   <title>Crisis Ready Solutions - CPR & First Aid Training</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -173,74 +174,25 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="py-5">
+  <!-- Live Google Reviews Carousel -->
+  <section id="reviews" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5">What Our Clients Say</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card testimonial-card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-4">
-                <img src="assets/testimonial-1.jpg" alt="Sarah Johnson" class="rounded-circle me-3" width="60" height="60">
-                <div>
-                  <h5 class="mb-0">Sarah Johnson</h5>
-                  <p class="text-muted mb-0">HR Manager</p>
-                </div>
-              </div>
-              <div class="testimonial-stars mb-3">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="card-text">"George's training was professional, informative, and engaging. Our staff now feels confident in their emergency response skills."</p>
-            </div>
+      <h2 class="text-center mb-4">What Our Clients Say (Google Reviews)</h2>
+      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <!-- Filled dynamically by public/js/reviews.js -->
+          <div class="carousel-item active">
+            <div class="p-4 bg-light rounded text-center">Loading reviews...</div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card testimonial-card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-4">
-                <img src="assets/testimonial-2.jpg" alt="Michael Torres" class="rounded-circle me-3" width="60" height="60">
-                <div>
-                  <h5 class="mb-0">Michael Torres</h5>
-                  <p class="text-muted mb-0">Small Business Owner</p>
-                </div>
-              </div>
-              <div class="testimonial-stars mb-3">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="card-text">"The on-site training was convenient and thorough. Crisis Ready Solutions exceeded our expectations with their professionalism."</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card testimonial-card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-4">
-                <img src="assets/testimonial-3.jpg" alt="Lisa Matthews" class="rounded-circle me-3" width="60" height="60">
-                <div>
-                  <h5 class="mb-0">Lisa Matthews</h5>
-                  <p class="text-muted mb-0">Daycare Director</p>
-                </div>
-              </div>
-              <div class="testimonial-stars mb-3">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p class="card-text">"As a daycare provider, having proper CPR certification is essential. The training was comprehensive and tailored to our specific needs."</p>
-            </div>
-          </div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   </section>
@@ -330,5 +282,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="public/js/reviews.js"></script>
 </body>
 </html>

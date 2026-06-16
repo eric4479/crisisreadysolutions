@@ -1,2 +1,4 @@
 .replit
 .vscode/
+.env
+*.log
