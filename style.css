@@ -238,11 +238,11 @@ body {
 }
 
 .logo {
-  width: 150px;
-  max-height: 80px;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
+ height: 60px;
+ width: auto;
+ max-height: 80px;
+ transition: transform 0.3s ease;
+ display: inline-block;
 }
 
 .logo svg, .footer-logo svg {
