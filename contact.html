@@ -59,7 +59,7 @@
         <div class="col-lg-7 mb-5 mb-lg-0">
           <div class="contact-form">
             <h2 class="mb-4">Schedule Your Training</h2>
-            <form id="scheduleForm" class="needs-validation" novalidate>
+            <form id="scheduleForm" class="needs-validation" novalidate method="POST" action="/api/contact">
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
@@ -128,7 +128,7 @@
               </div>
               
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="terms" required>
+              <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
                 <label class="form-check-label" for="terms">I agree to be contacted about scheduling training <span class="text-danger">*</span></label>
                 <div class="invalid-feedback">You must agree before submitting</div>
               </div>

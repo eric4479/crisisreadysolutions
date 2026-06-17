@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Form validation
-  const contactForms = document.querySelectorAll('.contact-form');
+  // Form validation and submission to /api/contact
+  const forms = document.querySelectorAll('form.needs-validation');
 
-  contactForms.forEach(form => {
-    form.addEventListener('submit', function(e) {
+  forms.forEach(form => {
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
 
       // Get form fields
@@ -84,21 +84,33 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       if (isValid) {
-        // Show success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'alert alert-success mt-3';
-        successMessage.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
+        // Submit via fetch to serverless endpoint
+        const formData = new FormData(this);
+        const payload = Object.fromEntries(formData.entries());
 
-        // Reset form
-        this.reset();
+        try {
+          const resp = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
 
-        // Show success message
-        this.appendChild(successMessage);
+          if (!resp.ok) throw new Error('Network response was not ok');
 
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-          successMessage.remove();
-        }, 5000);
+          const successMessage = document.createElement('div');
+          successMessage.className = 'alert alert-success mt-3';
+          successMessage.textContent = 'Thank you! Your request has been submitted. We will contact you soon.';
+
+          this.reset();
+          this.appendChild(successMessage);
+          setTimeout(() => successMessage.remove(), 5000);
+        } catch (err) {
+          const errorMessage = document.createElement('div');
+          errorMessage.className = 'alert alert-danger mt-3';
+          errorMessage.textContent = 'Submission failed. Please try again later.';
+          this.appendChild(errorMessage);
+          setTimeout(() => errorMessage.remove(), 5000);
+        }
       }
     });
   });
