@@ -231,3 +231,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+// Mailto button: open user's email client with prefilled message
+document.addEventListener('DOMContentLoaded', function() {
+  const mailtoBtn = document.getElementById('mailtoBtn');
+  const form = document.getElementById('scheduleForm');
+  if (mailtoBtn && form) {
+    mailtoBtn.addEventListener('click', function() {
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      const to = 'info@crisisreadysolutions.com';
+      const subject = `Training Request: ${data.name || ''} - ${data.service || ''}`;
+      let body = '';
+      body += `Name: ${data.name || ''}\n`;
+      body += `Email: ${data.email || ''}\n`;
+      body += `Phone: ${data.phone || ''}\n`;
+      body += `Organization: ${data.organization || ''}\n`;
+      body += `Service: ${data.service || ''}\n`;
+      body += `Group Size: ${data.groupSize || ''}\n`;
+      body += `Preferred Date: ${data.preferredDate || ''}\n`;
+      body += `Alternate Date: ${data.alternateDate || ''}\n\n`;
+      body += `Message:\n${data.message || ''}\n\n`;
+      body += `I agree to be contacted: ${data.terms ? 'Yes' : 'No'}`;
+      const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
+  }
+});
