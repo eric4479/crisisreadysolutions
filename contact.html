@@ -133,8 +133,12 @@
                 <div class="invalid-feedback">You must agree before submitting</div>
               </div>
               
-              <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
-              <button type="button" id="mailtoBtn" class="btn btn-outline-light btn-lg ms-2">Open in Email</button>
+              <div class="d-flex align-items-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+                <button type="button" id="mailtoBtn" class="btn btn-outline-light btn-lg ms-2">Open in Email</button>
+              </div>
+              <p class="small text-muted mt-2">Tip: Use "Open in Email" to draft the message in your email client, or click "Submit Request" to send via the website.</p>
+              <div id="mailtoStatus" aria-live="polite" class="visually-hidden"></div>
             </form>
           </div>
         </div>

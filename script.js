@@ -240,6 +240,9 @@ document.addEventListener('DOMContentLoaded', function() {
     mailtoBtn.addEventListener('click', function() {
       const formData = new FormData(form);
       const data = Object.fromEntries(formData.entries());
+
+      if (!confirm('Open your email client to draft this message?')) return;
+
       const to = 'info@crisisreadysolutions.com';
       const subject = `Training Request: ${data.name || ''} - ${data.service || ''}`;
       let body = '';
@@ -254,7 +257,22 @@ document.addEventListener('DOMContentLoaded', function() {
       body += `Message:\n${data.message || ''}\n\n`;
       body += `I agree to be contacted: ${data.terms ? 'Yes' : 'No'}`;
       const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      const statusEl = document.getElementById('mailtoStatus');
+      if (statusEl) {
+        statusEl.classList.remove('visually-hidden');
+        statusEl.textContent = 'Opening your email client...';
+      }
+
+      // open mailto
       window.location.href = mailto;
+
+      // hide status after short delay
+      setTimeout(() => {
+        if (statusEl) {
+          statusEl.classList.add('visually-hidden');
+        }
+      }, 3000);
     });
   }
 });
