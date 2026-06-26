@@ -59,87 +59,24 @@
         <div class="col-lg-7 mb-5 mb-lg-0">
           <div class="contact-form">
             <h2 class="mb-4">Schedule Your Training</h2>
-            <form id="scheduleForm" class="needs-validation" novalidate method="POST" action="/api/contact">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="name" name="name" required>
-                  <div class="invalid-feedback">Please enter your name</div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
-                  <input type="email" class="form-control" id="email" name="email" required>
-                  <div class="invalid-feedback">Please enter a valid email</div>
-                </div>
-              </div>
-              
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
-                  <input type="tel" class="form-control" id="phone" name="phone" required>
-                  <div class="invalid-feedback">Please enter your phone number</div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="organization" class="form-label">Organization/Company</label>
-                  <input type="text" class="form-control" id="organization" name="organization">
-                </div>
-              </div>
-              
-              <div class="mb-3">
-                <label for="service" class="form-label">Service Needed <span class="text-danger">*</span></label>
-                <select class="form-select" id="service" name="service" required>
-                  <option value="" selected disabled>Select a service</option>
-                  <option value="CPR/AED Training">CPR/AED Training</option>
-                  <option value="First Aid Training">First Aid Training</option>
-                  <option value="Combined CPR/First Aid">Combined CPR/First Aid</option>
-                  <option value="Corporate Training">Corporate Training</option>
-                  <option value="Other">Other (please specify)</option>
-                </select>
-                <div class="invalid-feedback">Please select a service</div>
-              </div>
-              
-              <div class="mb-3">
-                <label for="groupSize" class="form-label">Approximate Group Size <span class="text-danger">*</span></label>
-                <select class="form-select" id="groupSize" name="groupSize" required>
-                  <option value="" selected disabled>Select group size</option>
-                  <option value="1-5">1-5 people</option>
-                  <option value="6-10">6-10 people</option>
-                  <option value="11-20">11-20 people</option>
-                  <option value="21+">21+ people</option>
-                </select>
-                <div class="invalid-feedback">Please select group size</div>
-              </div>
-              
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="preferredDate" class="form-label">Preferred Date <span class="text-danger">*</span></label>
-                  <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
-                  <div class="invalid-feedback">Please select a preferred date</div>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="alternateDate" class="form-label">Alternate Date</label>
-                  <input type="date" class="form-control" id="alternateDate" name="alternateDate">
-                </div>
-              </div>
-              
-              <div class="mb-4">
-                <label for="message" class="form-label">Additional Information or Questions</label>
-                <textarea class="form-control" id="message" name="message" rows="5"></textarea>
-              </div>
-              
-              <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
-                <label class="form-check-label" for="terms">I agree to be contacted about scheduling training <span class="text-danger">*</span></label>
-                <div class="invalid-feedback">You must agree before submitting</div>
-              </div>
-              
-              <div class="d-flex align-items-center">
-                <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
-                <button type="button" id="mailtoBtn" class="btn btn-outline-light btn-lg ms-2">Open in Email</button>
-              </div>
-              <p class="small text-muted mt-2">Tip: Use "Open in Email" to draft the message in your email client, or click "Submit Request" to send via the website.</p>
-              <div id="mailtoStatus" aria-live="polite" class="visually-hidden"></div>
-            </form>
+            <p class="lead">Ready to set up CPR, AED, First Aid, or corporate training? Reach out directly and we will help coordinate a date, location, and group size that works for you.</p>
+            <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+              <a class="btn btn-primary btn-lg" href="mailto:info@crisisreadysolutions.com?subject=Training%20Request">
+                <i class="fas fa-envelope me-2"></i>Email Us
+              </a>
+              <a class="btn btn-outline-light btn-lg" href="tel:7403347077">
+                <i class="fas fa-phone me-2"></i>Call Us
+              </a>
+            </div>
+            <div class="mt-4">
+              <h5>Helpful details to include</h5>
+              <ul class="mb-0">
+                <li>Training type needed</li>
+                <li>Approximate group size</li>
+                <li>Preferred dates or timeframe</li>
+                <li>Training location in Central Florida</li>
+              </ul>
+            </div>
           </div>
         </div>
         
